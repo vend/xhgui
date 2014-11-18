@@ -7,6 +7,16 @@ class Xhgui_Config
     static $_config = array();
 
     /**
+     * Initialise configuration with default settings.
+     *
+     * @return void
+     */
+    public static function init()
+    {
+        self::load(__DIR__.'/../../config/config.default.php');
+    }
+
+    /**
      * Load a config file, it will replace
      * all the currently loaded configuration.
      *
